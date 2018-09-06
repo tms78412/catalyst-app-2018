@@ -14,6 +14,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 //Local dependencies
 import History from './../History';
+import theme from './../theme';
 import logo from './../Assets/logo.svg';
 
 //Instantiated
@@ -62,7 +63,7 @@ const AppHeader = class AppHeader extends Component {
 				renderLinks.push((
 					<LinkContainer to={linkInfo.path} color="blue" key={`link_${index}`}>
 						<Button bsStyle="link">
-							<linkInfo.icon size={24}/> {linkInfo.label}
+							<linkInfo.icon size={24} /> {linkInfo.label}
 						</Button>
 					</LinkContainer>
 				));
@@ -81,12 +82,12 @@ const AppHeader = class AppHeader extends Component {
 		const _this = this;
 
 		return (
-			<div style={{ width: `100%` }}>
-				<div style={{padding: 5, backgroundColor: `#040b15` }}>
+			<div className="w-100">
+				<div className="container-fluid" style={{ backgroundColor: theme.dark }}>
 					<img src={logo} className="App-logo" alt="AXOM Catalyst" align="left" />
-					<h3 style={{color: `#e2e2e2` }}>Catalyst 2018</h3>
+					<h3 style={{color: theme.light }}>Catalyst 2018</h3>
 				</div>
-				<div style={{padding: 5, backgroundColor: `#08172b`, height: 64 }}>
+				<div className="container-fluid" style={{ backgroundColor: theme.primary }}>
 					{_this._renderBackButton()}
 					{_this._renderLinks()}
 				</div>
