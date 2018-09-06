@@ -14,7 +14,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 //Local dependencies
 import History from './../History';
-import logo from './../logo.svg';
+import logo from './../Assets/logo.svg';
 
 //Instantiated
 const AppHeader = class AppHeader extends Component {
