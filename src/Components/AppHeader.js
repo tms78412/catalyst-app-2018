@@ -82,9 +82,9 @@ const AppHeader = class AppHeader extends Component {
 		const _this = this;
 
 		return (
-			<div className="w-100">
-				<div className="container-fluid" style={{ backgroundColor: theme.dark }}>
-					<img src={logo} className="App-logo" alt="AXOM Catalyst" align="left" />
+			<div>
+				<div className="container-fluid d-flex justify-content-start" style={{ backgroundColor: theme.dark }}>
+					<img src={logo} className="App-logo" alt="AXOM Catalyst"/>
 					<h3 style={{color: theme.light }}>Catalyst 2018</h3>
 				</div>
 				<div className="container-fluid" style={{ backgroundColor: theme.primary }}>
