@@ -91,11 +91,11 @@ const DataGrid = class DataGrid extends Component {
 		const _this = this;
 
 		return (
-			<div>
-				<div style={{ display: `inline-block` }}>
+			<div className="d-flex justify-content-around">
+				<div className="mr-1">
 					<label>Air Date:</label>
 				</div>
-				<div style={{ display: `inline-block` }}>
+				<div className="ml-1">
 					<DatePicker
 						selected={_this.state.selectedDate}
 						onChange={_this._handleDateChange.bind(_this)}
@@ -193,16 +193,19 @@ const DataGrid = class DataGrid extends Component {
 		];
 
 		return (
-			<Panel style={{ margin: 10, padding: 4, textAlign: `center` }}>
-				<div>
-					<div style={{ display: `inline-block` }}>
+			<Panel className="container-fluid">
+				<div className="d-flex justify-content-center">
+					<div className="mr-auto align-self-center">
+						{_this._renderAirDatePicker()}
+					</div>
+					<div className="mr-auto">
 						<h1>TV Shows</h1>
 					</div>
 					<div style={{ display: `inline-block` }}>
 						{_this._renderAirDatePicker()}
 					</div>
 				</div>
-				<div style={{ position: `relative` }}>
+				<div className="position-relative">
 					{_this._renderIndicator()}
 					<ReactTable
 						data={_this.state.dataResults}
@@ -211,7 +214,7 @@ const DataGrid = class DataGrid extends Component {
 						showPageSizeOptions={false}
 						noDataText={`No results found.`}
 					/>
-					<label>Found {_this.state.dataResults.length} results.</label>
+					<label>Found {_this.state.dataResults.length} shows.</label>
 				</div>
 			</Panel>
 		);
