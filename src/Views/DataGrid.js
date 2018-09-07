@@ -23,7 +23,8 @@ const DataGrid = class DataGrid extends Component {
 		this.state = {
 			dataStatus: `unset`,
 			dataResults: [],
-			selectedDate: moment()
+			selectedDate: moment(),
+			currentPage: 0,
 		};
 	}
 
@@ -78,7 +79,17 @@ const DataGrid = class DataGrid extends Component {
 
 		_this.setState({
 			dataStatus: `unset`,
-			selectedDate: date
+			selectedDate: date,
+			currentPage: 0,
+		});
+	}
+
+	_handlePageChange(pageNumber) {
+		// preserve context
+		const _this = this;
+		
+		_this.setState({
+			currentPage: pageNumber,
 		});
 	}
 
@@ -201,13 +212,12 @@ const DataGrid = class DataGrid extends Component {
 					<div className="mr-auto">
 						<h1>TV Shows</h1>
 					</div>
-					<div style={{ display: `inline-block` }}>
-						{_this._renderAirDatePicker()}
-					</div>
 				</div>
 				<div className="position-relative">
 					{_this._renderIndicator()}
 					<ReactTable
+						page={_this.state.currentPage}
+						onPageChange={_this._handlePageChange.bind(_this)}
 						data={_this.state.dataResults}
 						columns={columnConfig}
 						defaultPageSize={18}
