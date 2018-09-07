@@ -1,3 +1,12 @@
+/**
+ * This file contains theme variable definitions for our project
+ * 
+ * It currently includes definitions for colors that we can use to maintain color consistency throughout the project and
+ * easily change the color theme of the app entirely by simply changing the variables here
+ * 
+ * It can be extended to include things like font size and family and other style choices
+ */
+
 const theme = {
 	blue: `#007bff`,
 	indigo: `#6610f2`,
