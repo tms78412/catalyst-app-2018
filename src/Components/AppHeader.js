@@ -1,15 +1,7 @@
 //Dependencies
 import React, { Component } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
-import {
-	Button,
-	Grid,
-	Row,
-	Col,
-	Navbar,
-	Nav,
-	Panel
-} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 //Local dependencies
