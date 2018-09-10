@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 //Local dependencies
 
 //Instantiated
+/**
+ * Class describing a React component that renders a view containing a form a user can use to submit data to a server
+ */
 const Form = class Form extends Component {
 	render() {
 		// preserve context

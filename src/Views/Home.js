@@ -5,6 +5,9 @@ import { Button } from 'react-bootstrap';
 //Local dependencies
 
 //Instantiated
+/**
+ * Class describing a React component that renders the home view of the App
+ */
 const Home = class Home extends Component {
 	render() {
 		// preserve context
