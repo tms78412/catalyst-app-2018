@@ -17,8 +17,8 @@ const QUERY_DATE_FORMAT = `YYYY-MM-DD`;
 const TIME_FORMAT = `hh:mm a`;
 
 const DataGrid = class DataGrid extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			dataStatus: `unset`,
