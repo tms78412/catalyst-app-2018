@@ -31,4 +31,5 @@ const theme = {
 	dark: `#040b15`,
 };
 
+export { theme };
 export default theme;
