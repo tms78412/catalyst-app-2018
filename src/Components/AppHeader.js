@@ -117,8 +117,11 @@ const AppHeader = class AppHeader extends Component {
 		return (
 			<div>
 				<div className="container-fluid d-flex justify-content-start" style={{ backgroundColor: theme.dark }}>
-					<img src={logo} className="App-logo" alt="AXOM Catalyst" />
-					<h3 style={{ color: theme.light }}>Catalyst 2018</h3>
+					<img src={logo} className="App-logo" alt="AXOM Catalyst" align="left" />
+					<div className="flex-col">
+						<h4 style={{ color: theme.light }}>Introduction To JavaScript</h4>
+						<h5 style={{ color: theme.light }}>Catalyst 2018</h5>
+					</div>
 				</div>
 				<div className="container-fluid" style={{ backgroundColor: theme.primary }}>
 					{_this._renderBackButton()}
